@@ -2,7 +2,7 @@ def tax(subtotal):
     theTotalAmount=subtotal*(1+7/100)
     theTotalAmount=round(theTotalAmount,2)
     return theTotalAmount
-total=0                           #accumulative variable
+total=0                        #accumulative variable
 masterList=[]
 def order(total):
     ui="w"
@@ -113,9 +113,11 @@ def order(total):
         #print("yo're total is",total)
         '''total=('${:,.2f}'.format(total))'''
         #print('Your order is a {0} sandwich, a {1} drink, a {2} fry, and {3} ketchup packet(s) \nfor a total of {4}'.format(sandwhich,beverage,fries,ketchup,total))
+    return masterList
 order(total)
+f=0
 print("your order is:")
-for i in range(masterList):
-    print(masterList[i])
-    i+1
+for i in range(len(masterList)):
+    print(masterList[f])
+    f+1
 print("the total is",tax(total))
